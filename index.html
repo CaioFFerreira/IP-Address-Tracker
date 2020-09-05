@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IP Addrress Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="....." />
+    <meta name="keywords" content="....." />
+    <link rel="canonical" href="...." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="...." />
+    <meta property="og:description" content="...." />
+    <meta name="og:keywords" content="...." />
+    <meta property="og:url" content="..." />
+    <meta property="og:site_name" content="......" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="....." />
+    <meta name="twitter:title" content="..............." />
+    <meta name="author" content="Caio Fábio Duarte Ferreira" />
+    <meta property="og:image" content="............" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/geral.css" />
+  </head>
+  <body>
+    <header class="header">
+        <h1 class="title-h4 bold-400 padding-bottom-20">IP Address Tracker</h1>
+
+        <div class="search padding-bottom-40">
+            <input type="text" placeholder="Search for any IP addressor domain" id="search">
+            <button class="btn"><img src="images/icon-arrow.svg"></button>
+        </div>
+
+        <address class="address">
+            <div class="address__item">
+                <ul>
+                    <li class="text-p  padding-bottom-10 bold-500">ip address</li>
+                    <li class="title-h5 bold-500">192.212.174.101</li>
+                </ul>
+            </div>
+            <div class="address__item">
+                <ul>
+                    <li class="text-p  padding-bottom-10 bold-500">location</li>
+                    <li  class="title-h5 bold-500">Brooklyn, NY 10001 </li>
+                </ul>
+            </div>
+            <div class="address__item">
+                <ul>
+                    <li class="text-p  padding-bottom-10 bold-500">Timezone</li>
+                    <li  class="title-h5 bold-500">utc-05:00</li>
+                </ul>
+            </div>
+            <div class="address__item">
+                <ul>
+                    <li class="text-p  padding-bottom-10 bold-500">isp</li>
+                    <li  class="title-h5 bold-500">SpaceX<br> Starlink</li>
+                </ul>
+            </div>
+        </address>
+    </header>
+
+    <div id="map" class="mapa"></div>
+
+    <script src="js/script.js"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKDLWUdvHA5pt82UWvuLYXJPCBTo-9zYQ&callback=initMap">
+    </script>
+  </body>
+</html>
