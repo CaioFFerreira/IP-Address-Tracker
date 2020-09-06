@@ -21,6 +21,14 @@
     <meta name="twitter:title" content="..............." />
     <meta name="author" content="Caio Fábio Duarte Ferreira" />
     <meta property="og:image" content="............" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
     <link
       rel="shortcut icon"
       href="images/favicon-32x32.png"
@@ -30,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="css/geral.css" />
   </head>
   <body>
+
     <header class="header">
         <h1 class="title-h4 bold-400 padding-bottom-20">IP Address Tracker</h1>
 
@@ -38,39 +47,38 @@
             <button class="btn"><img src="images/icon-arrow.svg"></button>
         </div>
 
-        <address class="address">
+        <address class="address" id="address">
             <div class="address__item">
                 <ul>
                     <li class="text-p  padding-bottom-10 bold-500">ip address</li>
-                    <li class="title-h5 bold-500">192.212.174.101</li>
+                    <li class="title-h5 bold-500"><span id="ip"><img src="images/loading.svg" class="loading">Waiting...</span></li>
                 </ul>
             </div>
             <div class="address__item">
                 <ul>
                     <li class="text-p  padding-bottom-10 bold-500">location</li>
-                    <li  class="title-h5 bold-500">Brooklyn, NY 10001 </li>
+                    <li  class="title-h5 bold-500"><span id="location"><img src="images/loading.svg" class="loading">Waiting...</span></li>
                 </ul>
             </div>
             <div class="address__item">
                 <ul>
                     <li class="text-p  padding-bottom-10 bold-500">Timezone</li>
-                    <li  class="title-h5 bold-500">utc-05:00</li>
+                    <li  class="title-h5 bold-500"><span id="timezone"><img src="images/loading.svg" class="loading">Waiting...</span></li>
                 </ul>
             </div>
             <div class="address__item">
                 <ul>
                     <li class="text-p  padding-bottom-10 bold-500">isp</li>
-                    <li  class="title-h5 bold-500">SpaceX<br> Starlink</li>
+                    <li  class="title-h5 bold-500"><span id="isp"><img src="images/loading.svg" class="loading">Waiting...</span></li>
                 </ul>
             </div>
         </address>
     </header>
 
-    <div id="map" class="mapa"></div>
-
+    <div class="mapa"  id="map">
+            <p>Waiting  IP addressor...</p>
+    </div>
     <script src="js/script.js"></script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtJxvex3rZ_z459pcFMXObLvMkH41P7cQ&callback=initMap">
-    </script>
+    
   </body>
 </html>

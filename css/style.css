@@ -1,5 +1,9 @@
-
-
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
 .header{
     background-image: url(../images/pattern-bg.png);
     background-repeat: no-repeat;
@@ -7,7 +11,6 @@
     background-position: center;
     text-align: center;
     padding: 30px 30px;
-    flex:1;
 }
 .header h1{
     color:#fff;
@@ -37,6 +40,7 @@
     background-color:var(--cor-2);
     transition: 0.5 ease-in-out;
     cursor: pointer;
+    outline: none;
 }
 .search .btn:hover{
     opacity: .8;
@@ -49,17 +53,24 @@
     background-color: #fff;
     max-width: 960px;
     margin: 0 auto;
-    grid-gap: 50px;
     border-radius: 15px;
-    padding: 25px 20px;
+    padding: 30px 0px;
     box-shadow: 0 1px 10px 0 rgba(32,33,36,0.5);
-    margin-bottom: -100px;
     position: relative;
+    margin-bottom: -100px;
     z-index: 999;
 }
 
 .address__item{
     text-align: left;
+    padding: 0px 30px;
+}
+
+.address__item:nth-child(1n){
+    border-left:1px solid rgb(182, 174, 174);
+}
+.address__item:first-child{
+    border-left:0px ;
 }
 
 .address__item ul li:first-child{
@@ -71,5 +82,43 @@
 .mapa{
     width: 100%;
     z-index: 998;
-    height: 400px!important;
+    flex: 1;
+    text-align: center;
+    padding:  30px;
+    padding-top: 150px;
+}
+
+.loading{
+    max-width: 25px;
+    display: block;
+    margin:20px;
+    animation-name:turnAround ;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes turnAround {
+     100%{transform: rotate(-180deg);}
+}
+
+@media (max-width:880px){
+    .address{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: -100px;
+    }
+
+    .address__item{
+        text-align: center;
+        padding:20px 30px;
+    }
+.loading{
+    max-width: 25px;
+    display: block;
+    margin:5px auto;
+}
+.mapa{
+    padding: 150px 30px;
+}
+
 }
